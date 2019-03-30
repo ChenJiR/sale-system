@@ -21,7 +21,7 @@ store.commit('setNavTree',MenuData);
 
 addIFrameUrl(MenuData);
 
-const router = new Router({routes: routes});
+const router = new Router({routes});
 
 router.beforeEach((to, from, next) => {
   handleIFrameUrl(to.path);

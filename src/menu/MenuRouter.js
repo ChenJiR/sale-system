@@ -4,6 +4,15 @@ import IFrame from '@/components/IFrame/Iframe'
 
 export default [
     {
+        path: '',
+        name: '首页',
+        component: HelloWorld,
+        meta: {
+            icon: 'fa fa-home fa-lg',
+            index: 0
+        }
+    },
+    {
         path: 'TestTable',
         name: 'TestTable',
         component: TestTable,

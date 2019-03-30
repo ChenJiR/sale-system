@@ -42,13 +42,13 @@ export default {
   },
   methods: {
     handleopen() {
-      console.log('handleopen')
+      // console.log('handleopen')
     },
     handleclose() {
-      console.log('handleclose')
+      // console.log('handleclose')
     },
     handleselect(a, b) {
-      console.log('handleselect')
+      // console.log('handleselect')
     },
     // 路由操作处理
     handleRoute (route) {
