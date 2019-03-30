@@ -1,11 +1,10 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Frame from '@/components/Frame/Frame'
-import HelloWorld from '@/components/HelloWorld'
-import TestTable from '@/components/TestTable'
-import IFrame from '@/components/IFrame/Iframe'
 import { getIFramePath, getIFrameUrl } from '@/utils/iframe'
 import store from '@/store'
+import MenuData from '@/menu/MenuData'
+import MenuRouter from '@/menu/MenuRouter'
 
 Vue.use(Router);
 
@@ -14,75 +13,7 @@ const routes = [
     path: '/',
     name: '首页',
     component: Frame,
-    children: [
-      {
-        path: 'TestTable',
-        name: 'TestTable',
-        component: TestTable,
-        meta: {
-          icon: 'fa fa-home fa-lg',
-          index: 0
-        }
-      },
-      {
-        path: 'HelloWorld',
-        name: 'HelloWorld',
-        component: HelloWorld,
-        meta: {
-          icon: 'fa fa-home fa-lg',
-          index: 0
-        }
-      },
-      {
-        path: 'baidu.com',
-        name: 'baidu',
-        component: IFrame,
-        meta: {
-          icon: 'fa fa-home fa-lg',
-          index: 0
-        }
-      },
-    ]
-  }
-];
-
-const MenuData = [
-  {
-    "name":"系统管理",
-    "url":null,
-    "perms":null,
-    "type":0,
-    "icon":"el-icon-setting",
-    "level":0,
-    "children":[
-      {
-        "name":"table",
-        "url":'TestTable',
-        "perms":"",
-        "type":2,
-        "icon":null,
-        "level":1,
-        "children":[]
-      },
-      {
-        "name":"新增",
-        "url":'HelloWorld',
-        "perms":"",
-        "type":2,
-        "icon":null,
-        "level":1,
-        "children":[]
-      },
-      {
-        "name":"frameTest",
-        "url":'http://baidu.com',
-        "perms":"",
-        "type":2,
-        "icon":null,
-        "level":1,
-        "children":[]
-      },
-    ]
+    children: MenuRouter
   }
 ];
 
