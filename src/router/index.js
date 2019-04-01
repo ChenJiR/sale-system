@@ -50,15 +50,9 @@ function addIFrameUrl(menuList){
   for (let i = 0; i < menuList.length; i++) {
     if (menuList[i].children && menuList[i].children.length >= 1) {
       temp = temp.concat(menuList[i].children)
-    } else if (menuList[i].url && /\S/.test(menuList[i].url)) {
-      //将menuList中的 path 和 路由中的 url 绑定，这样打开路由的时候就可以找到对应的url
-      let path = getIFramePath(menuList[i].url);
-      if (path) {
-        // 存储嵌套页面路由路径和访问URL
-        let url = getIFrameUrl(menuList[i].url);
-        let iFrameUrl = {'path': path, 'url': url};
-        store.commit('addIFrameUrl', iFrameUrl)
-      }
+    }
+    else if (menuList[i].url && menuList[i].iframe_url && /\S/.test(menuList[i].url)){
+      store.commit('addIFrameUrl', {'path': menuList[i].url, 'url': menuList[i].iframe_url})
     }
     if (temp.length >= 1) {
       addIFrameUrl(temp)

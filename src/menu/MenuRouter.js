@@ -31,7 +31,7 @@ export default [
         }
     },
     {
-        path: 'baidu.com',
+        path: 'baidu',
         name: 'baidu',
         component: IFrame,
         meta: {

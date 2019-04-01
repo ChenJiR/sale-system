@@ -1,5 +1,6 @@
 export default [
     {
+        "id":1,
         "name":"系统管理",
         "url":null,
         "perms":null,
@@ -27,7 +28,8 @@ export default [
             },
             {
                 "name":"frameTest",
-                "url":'http://baidu.com',
+                "url":'baidu',
+                "iframe_url":"http://baidu.com",
                 "perms":"",
                 "type":2,
                 "icon":null,
@@ -35,5 +37,5 @@ export default [
                 "children":[]
             },
         ]
-    }
+    },
 ];
