@@ -68,6 +68,7 @@ export default {
       } else {
         this.$router.push("/")
       }
+      this.$store.commit('deletePageCache',tabName)
     },
     // tabs, 关闭当前
     tabsCloseCurrentHandle () {
@@ -75,12 +76,14 @@ export default {
     },
     // tabs, 关闭其它
     tabsCloseOtherHandle () {
+      this.$store.commit('clearPageCache')
       this.mainTabs = this.mainTabs.filter(item => item.name === this.mainTabsActiveName)
     },
     // tabs, 关闭全部
     tabsCloseAllHandle () {
       this.mainTabs = []
       this.$router.push("/")
+      this.$store.commit('clearPageCache')
     },
     // tabs, 刷新当前
     tabsRefreshCurrentHandle () {

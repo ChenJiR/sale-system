@@ -8,15 +8,17 @@ import tab from './modules/tab'
 import iframe from './modules/iframe'
 import user from './modules/user'
 import menu from './modules/menu'
+import page_data_cache from './modules/page_data_cache'
 
 const store = new vuex.Store({
-    modules: {
-        app: app,
-        tab: tab,
-        iframe: iframe,
-        user: user,
-        menu: menu
-    }
+  modules: {
+    app: app,
+    tab: tab,
+    iframe: iframe,
+    user: user,
+    menu: menu,
+    page_data_cache:page_data_cache
+  }
 })
 
 export default store
